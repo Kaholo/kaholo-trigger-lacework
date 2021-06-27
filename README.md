@@ -15,5 +15,5 @@ This triggers whenever there is a lacework alert.
 1) Event type - If specified, only trigger when the alert matches the event type provided. If not specified, accept any event type.
 2) Event ID - If specified, only trigger when the alert is from the specific event with the event ID provided. 
     If not specified, accept any event ID.
-3) Event Severity - If specified, only trigger when the alert is with the severity level specified(0-4).
+3) Event Severity - If specified, only trigger when the alert matches the severity level specified (1-5).
     If not specified, accept any event severity.

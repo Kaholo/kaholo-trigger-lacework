@@ -66,23 +66,23 @@
               "name": "Any"
             },
             {
-              "id": "0",
+              "id": "5",
               "name": "Info"
             },
             {
-              "id": "1",
+              "id": "4",
               "name": "Low"
             },
             {
-              "id": "2",
+              "id": "3",
               "name": "Medium"
             },
             {
-              "id": "3",
+              "id": "2",
               "name": "High"
             },
             {
-              "id": "4",
+              "id": "1",
               "name": "Critical"
             }
           ]
