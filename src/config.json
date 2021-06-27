@@ -4,7 +4,7 @@
   "execProgram": "node",
   "main": "app.js",
   "imgUrl": "lacework.png",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Lacework Trigger",
   "methods": [
     {
@@ -18,7 +18,7 @@
           "type": "options",
           "options": [
             {
-              "id": "any",
+              "id": "Any",
               "name": "Any"
             },
             {
@@ -86,6 +86,11 @@
               "name": "Critical"
             }
           ]
+        },
+        {
+          "name":"includeHigherSev",
+          "viewName":"Include Higher Severities",
+          "type": "boolean"
         }
       ]
     }
