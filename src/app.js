@@ -3,15 +3,13 @@ const translateMap = {"Any": "any", "Info": 5, "Low": 4,
                       "5": 5, "4": 4, "3": 3, "2": 2, "1": 1};
 
 async function alertWebhook(req, res, settings, triggerControllers) {
-  if (!triggerControllers) {
-    return res.status(400).send("triggers cannot be nil");
-  }
   const body = req.body;
   try {
     const reqEType = body.event_type; // Get event type
     const reqEDescription = body.event_description; // Get event ID
     const reqESeverity = body.event_severity; // Get event severity 
     const reqETitle = body.event_title; // Get event severity
+    const recId = body.rec_id; // Get event severity
     if (!reqEType || !reqEDescription || !reqESeverity){
       res.status(400).send("bad lacework alert format");
       console.error("bad lacework alert format");
@@ -29,7 +27,7 @@ async function alertWebhook(req, res, settings, triggerControllers) {
       if (eventType !== "Any" && reqEType !== eventType) return;
       if (reqESeverity > eventSeverity) return;
       if (!includeHigherSev && reqESeverity !== eventSeverity) return;
-      if (id && !reqEDescription.includes(` ${triggerEventId} `)) return;
+      if (id && recId !== id) return;
 
       const msg = `${reqETitle} - severity ${reqESeverity}`;
       trigger.execute(msg, body);
