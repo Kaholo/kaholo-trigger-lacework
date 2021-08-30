@@ -13,7 +13,7 @@ This triggers whenever there is a lacework alert.
 
 ### Parameters:
 1) Event type - If specified, only trigger when the alert matches the event type provided. If not specified, accept any event type.
-2) Event ID - If specified, only trigger when the alert is from the specific event with the event ID provided. 
-    If not specified, accept any event ID.
+2) Recommendation ID - If specified, only trigger when the alert is from the specific Recommendation ID that is send with the compliance event.
+    If not specified, accept any Recommendation ID.
 3) Event Severity - If specified, only trigger when the alert matches the severity level specified (1-5).
     If not specified, accept any event severity.

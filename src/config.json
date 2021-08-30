@@ -4,7 +4,7 @@
   "execProgram": "node",
   "main": "app.js",
   "imgUrl": "lacework.png",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Lacework Trigger",
   "methods": [
     {
@@ -53,7 +53,7 @@
         },
         {
           "name":"id",
-          "viewName":"Event ID",
+          "viewName":"Recommendation ID",
           "type": "string"
         },
         {
